@@ -1,0 +1,436 @@
+{%extends 'base.html'%}
+{%load static%}
+
+{%block link%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css'%}">
+{% endblock %}
+
+{%block content%}
+
+    <div class="main">
+     <div class="left-main">
+        <div class="main-body">
+          <div class="main-title">Enjoy easy hotel booking service</div>
+          <div class="main-desc">Explore modern city</div>
+          <form class="form" method="get" action="{% url 'search'%}">
+            <div class="form-input" >
+              <input type="text" placeholder="Location" name="location">
+            </div>
+            <div class="form-input">
+              <input type="text" placeholder="room" name="room">
+            </div>
+            <div class=" date">
+              <input type="date" placeholder="Check-in" name="checkin">
+            </div>
+            <div class="date">
+              <input type="date" placeholder="Check-out" name="checkout">
+            </div>
+            <div class="bton">
+              <input type="submit" value="Check Availability" placeholder="Check-out">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="right-main">
+      </div>
+    </div>
+    <div class="works">
+      <div class="work-title">How Its Work</div>
+      <div class="hotel-description">Best hotel of all time. It has all the facilities you need to feel cozy. It has five rated stars given by the customers itself.</div>
+      <div class="step">
+        <div class="step-one">
+          <div class="image-logo">
+            <img src="{% static 'image/calendar.png' %}">
+          </div>
+          <div class="step-description">
+            <span>Select Days</span>
+            <span>Check In and Check Out</span>
+          </div>
+          <div class="description">
+            <span>Best hotel of all time. It has all the facilities you need to feel cozy</span>
+          </div>
+        </div>
+        <div class="step-one">
+          <div class="image-logo">
+            <img src="{% static 'image/maps.png'%}">
+          </div>
+          <div class="step-description">
+            <span>Find all the</span>
+            <span>Hotel near you</span>
+          </div>
+          <div class="description">
+            <span>Best hotel of all time. It has all the facilities you need to feel cozy</span>
+          </div>
+        </div>
+        <div class="step-one">
+          <div class="image-logo">
+            <img src="{% static 'image/suitcase.png'%}">
+          </div>
+          <div class="step-description">
+            <span>Pick your hotel</span>
+            <span>And enjoy your trip</span>
+          </div>
+          <div class="description">
+            <span>Best hotel of all time. It has all the facilities you need to feel cozy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="hotel">
+      <div class="hotel-title">Our Hotels</div>
+      <div class="hotel-description">Best hotel of all time. It has all the facilities you need to feel cozy. It has five rated stars given by the customers itself.</div>
+        <div class="hotel-images">
+          <div class="hotels long">one</div>
+          <div class="hotels medium one">
+            <div>
+              <div class="hotel-place">POKHARA</div>
+              <div class="hotel-name"></div>
+            </div>
+          </div>
+          <div class="hotels medium two">three</div>
+          <div class="hotels wide">four</div>
+          <div class="hotels medium three">five</div>
+        </div>
+      </div>
+    </div>
+    <div class="featured">
+      <div class="featured-title">Featured Hotel</div>
+      <div class="hotel-description">Best hotel of all time. It has all the facilities you need to feel cozy. It has five rated stars given by the customers itself.</div>
+      <div class="feature-hotel">
+        <div class="feature-one">
+          <div class="hotel-image">
+            <img src="{% static 'image/hotelthree.jpeg'%}">
+          </div>
+          <div class="hotel-bottom">
+            <div class="hotel-name"><h3>Hotel Price Plaza</h3></div>
+            <div class="hotel-place">
+              <div><i class="material-icons"> place</i></div>
+              <div class="hotel-address">Lazimpat, Kathmandu</div>
+            </div>
+            <div class="hotel-services">
+              <div class="service">
+                <div><img src="{% static 'image/air-conditioner.png'%}"></div>
+                <div class="service-name">AC</div>
+              </div>
+              <div class="service">
+                <div><img src="{% static 'image/hotel.png'%}"></div>
+                <div class="service-name">Service</div>
+              </div>
+              <div class="service">
+                <div><img src="{% static 'image/wifi.png'%}"></div>
+                <div class="service-name">Wifi</div>
+              </div>
+              <div class="service">
+                <div><img src="{% static 'image/tv.png'%}"></div>
+                <div class="service-name">TV</div>
+              </div>
+              <div class="service">
+                <div><img src="{% static 'image/card.png'%}"></div>
+                <div class="service-name">Key Safe</div>
+              </div>
+              <div class="service">
+                <div><img src="{% static 'image/car.png'%}"></div>
+                <div class="service-name">Parking</div>
+              </div>
+            </div>
+            <div class="hotel-price">
+              <div class="hotel-first">
+                <h4>NPR 1200</h4>
+                <span>starting price</span>
+              </div>
+              <div class="hotel-second">
+                <button>Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-one">
+          <div class="hotel-image">
+            <img src="{% static 'image/hotelthree.jpeg'%}">
+          </div>
+          <div class="hotel-bottom">
+            <div class="hotel-name"><h3>Hotel Price Plaza</h3></div>
+            <div class="hotel-place">
+              <div><i class="material-icons"> place</i></div>
+              <div class="hotel-address">Lazimpat, Kathmandu</div>
+            </div>
+            <div class="hotel-services">
+              <div class="service">
+                <div><img src="{% static 'image/air-conditioner.png'%}"></div>
+                <div class="service-name">AC</div>
+              </div>
+              <div class="service">
+                <div><img src="{% static 'image/hotel.png'%}"></div>
+                <div class="service-name">Service</div>
+              </div>
+              <div class="service">
+                <div><img src="{% static 'image/wifi.png'%}"></div>
+                <div class="service-name">Wifi</div>
+              </div>
+              <div class="service">
+                <div><img src="{% static 'image/tv.png'%}"></div>
+                <div class="service-name">TV</div>
+              </div>
+              <div class="service">
+                <div><img src="{% static 'image/card.png'%}"></div>
+                <div class="service-name">Key Safe</div>
+              </div>
+              <div class="service">
+                <div><img src="{% static 'image/car.png'%}"></div>
+                <div class="service-name">Parking</div>
+              </div>
+            </div>
+            <div class="hotel-price">
+              <div class="hotel-first">
+                <h4>NPR 1200</h4>
+                <span>starting price</span>
+              </div>
+              <div class="hotel-second">
+                <button>Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+<div class="feature-one">
+          <div class="hotel-image">
+            <img src="{% static 'image/hotelthree.jpeg'%}">
+          </div>
+          <div class="hotel-bottom">
+            <div class="hotel-name"><h3>Hotel Price Plaza</h3></div>
+            <div class="hotel-place">
+              <div><i class="material-icons"> place</i></div>
+              <div class="hotel-address">Lazimpat, Kathmandu</div>
+            </div>
+            <div class="hotel-services">
+              <div class="service">
+                <div><img src="{% static 'image/air-conditioner.png'%}"></div>
+                <div class="service-name">AC</div>
+              </div>
+              <div class="service">
+                <div><img src="{% static 'image/hotel.png'%}"></div>
+                <div class="service-name">Service</div>
+              </div>
+              <div class="service">
+                <div><img src="{% static 'image/wifi.png'%}"></div>
+                <div class="service-name">Wifi</div>
+              </div>
+              <div class="service">
+                <div><img src="{% static 'image/tv.png'%}"></div>
+                <div class="service-name">TV</div>
+              </div>
+              <div class="service">
+                <div><img src="{% static 'image/card.png'%}"></div>
+                <div class="service-name">Key Safe</div>
+              </div>
+              <div class="service">
+                <div><img src="{% static 'image/car.png'%}"></div>
+                <div class="service-name">Parking</div>
+              </div>
+            </div>
+            <div class="hotel-price">
+              <div class="hotel-first">
+                <h4>NPR 1200</h4>
+                <span>starting price</span>
+              </div>
+              <div class="hotel-second">
+                <button>Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div> 
+    </div>
+  </div>
+    <div class="top-hotel">
+        <div class="featured-title">Hotel Resturant</div>
+        <div class="hotel-description">Best hotel of all time. It has all the facilities you need to feel cozy. It has five rated stars given by the customers itself.</div>
+      <div class="hotel-all">
+          <div class="box-hotel">
+              <div class="image-top">
+                  <img src="{% static 'image/onehotel.jpg'%}">
+                  <div class="image-over">
+                      <i class="material-icons">favorite_border</i>
+                  </div>
+                  <div class="rate">9.1</div>
+              </div>
+              <div class="hotel-descriptions">
+                  <div class="hotel-hour">
+                      <i class="material-icons">access_time</i>
+                      <span id="hour">Open</span>
+                      <span>until 8:00 PM</span>
+                  </div>
+                  <div class="hotel-titles">Fifteen cusine kitchen</div>
+                  <div class="rating">
+                      <div class="review-left">
+                          <span>Cafe</span>
+                          <i class="material-icons"> attach_money</i>
+                          <i class="material-icons"> attach_money</i>
+                          <i class="material-icons"> attach_money</i>
+                          <i class="material-icons"> attach_money</i>
+                      </div>
+                      <div class="review">
+                          <i class="material-icons"> sms</i>
+                          <span>43 Reviews</span>
+                      </div>
+                  </div>
+                  <div class="hotel-location">
+                      <i class="material-icons"> place</i>
+                      <span>Lazimpat, Kathmandu</span>
+                  </div>
+              </div>
+          </div>
+          <div class="box-hotel">
+              <div class="image-top">
+                  <img src="{% static 'image/hoteltwo.jpg'%}">
+                  <div class="image-over">
+                      <i class="material-icons">favorite_border</i>
+                  </div>
+                  <div class="rate">9.1</div>
+              </div>
+              <div class="hotel-descriptions">
+                  <div class="hotel-hour">
+                      <i class="material-icons">access_time</i>
+                      <span id="hour">Open</span>
+                      <span>until 8:00 PM</span>
+                  </div>
+                  <div class="hotel-titles">Fifteen cusine kitchen</div>
+                  <div class="rating">
+                      <div class="review-left">
+                          <span>Cafe</span>
+                          <i class="material-icons"> attach_money</i>
+                          <i class="material-icons"> attach_money</i>
+                          <i class="material-icons"> attach_money</i>
+                          <i class="material-icons"> attach_money</i>
+                      </div>
+                      <div class="review">
+                          <i class="material-icons"> sms</i>
+                          <span>43 Reviews</span>
+                      </div>
+                  </div>
+                  <div class="hotel-location">
+                      <i class="material-icons"> place</i>
+                      <span>Lazimpat, Kathmandu</span>
+                  </div>
+              </div>
+          </div>
+          <div class="box-hotel">
+              <div class="image-top">
+                  <img src="{% static '/image/hotelthree.jpg'%}">
+                  <div class="image-over">
+                      <i class="material-icons">favorite_border</i>
+                  </div>
+                  <div class="rate">9.1</div>
+              </div>
+              <div class="hotel-descriptions">
+                  <div class="hotel-hour">
+                      <i class="material-icons">access_time</i>
+                      <span id="hour">Open</span>
+                      <span>until 8:00 PM</span>
+                  </div>
+                  <div class="hotel-titles">Fifteen cusine kitchen</div>
+                  <div class="rating">
+                      <div class="review-left">
+                          <span>Cafe</span>
+                          <i class="material-icons"> attach_money</i>
+                          <i class="material-icons"> attach_money</i>
+                          <i class="material-icons"> attach_money</i>
+                          <i class="material-icons"> attach_money</i>
+                      </div>
+                      <div class="review">
+                          <i class="material-icons"> sms</i>
+                          <span>43 Reviews</span>
+                      </div>
+                  </div>
+                  <div class="hotel-location">
+                      <i class="material-icons"> place</i>
+                      <span>Lazimpat, Kathmandu</span>
+                  </div>
+              </div>
+          </div>
+          <div class="box-hotel">
+              <div class="image-top">
+                  <img src="{% static 'image/hotelfour.jpg'%}">
+                  <div class="image-over">
+                      <i class="material-icons">favorite_border</i>
+                  </div>
+                  <div class="rate">9.1</div>
+              </div>
+              <div class="hotel-descriptions">
+                  <div class="hotel-hour">
+                      <i class="material-icons">access_time</i>
+                      <span id="hour">Open</span>
+                      <span>until 8:00 PM</span>
+                  </div>
+                  <div class="hotel-titles">Fifteen cusine kitchen</div>
+                  <div class="rating">
+                      <div class="review-left">
+                          <span>Cafe</span>
+                          <i class="material-icons"> attach_money</i>
+                          <i class="material-icons"> attach_money</i>
+                          <i class="material-icons"> attach_money</i>
+                          <i class="material-icons"> attach_money</i>
+                      </div>
+                      <div class="review">
+                          <i class="material-icons"> sms</i>
+                          <span>43 Reviews</span>
+                      </div>
+                  </div>
+                  <div class="hotel-location">
+                      <i class="material-icons"> place</i>
+                      <span>Lazimpat, Kathmandu</span>
+                  </div>
+              </div>
+          </div>
+          <div class="box-hotel">
+              <div class="image-top">
+                  <img src="{% static 'image/hotelfive.jpg'%}">
+                  <div class="image-over">
+                      <i class="material-icons">favorite_border</i>
+                  </div>
+                  <div class="rate">9.1</div>
+              </div>
+              <div class="hotel-descriptions">
+                  <div class="hotel-hour">
+                      <i class="material-icons">access_time</i>
+                      <span id="hour">Open</span>
+                      <span>until 8:00 PM</span>
+                  </div>
+                  <div class="hotel-titles">Fifteen cusine kitchen</div>
+                  <div class="rating">
+                      <div class="review-left">
+                          <span>Cafe</span>
+                          <i class="material-icons"> attach_money</i>
+                          <i class="material-icons"> attach_money</i>
+                          <i class="material-icons"> attach_money</i>
+                          <i class="material-icons"> attach_money</i>
+                      </div>
+                      <div class="review">
+                          <i class="material-icons"> sms</i>
+                          <span>43 Reviews</span>
+                      </div>
+                  </div>
+                  <div class="hotel-location">
+                      <i class="material-icons"> place</i>
+                      <span>Lazimpat, Kathmandu</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="rooms">
+    <div class="hotel-title">Our Hotels</div>
+    <div class="hotel-description">Best hotel of all time. It has all the facilities you need to feel cozy. It has five rated stars given by the customers itself.</div>
+      <div class="room-images">
+        <div class="room one">one</div>
+        <div class="room two"></div>
+        <div class="room three">three</div>
+        <div class="room four">four</div>
+        <div class="room five">five</div>
+        <div class="room six">five</div>
+      </div>
+    </div>
+  </div>
+
+{%endblock%}

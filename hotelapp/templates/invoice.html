@@ -1,0 +1,143 @@
+
+{%load static%}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day&display=swap" rel="stylesheet">
+    <style type="text/css">
+        .navbar-brand{
+            padding-left: 60px;
+            display: flex;
+            width: 30%;
+            font-family: 'Dawning of a New Day', cursive !important;
+            font-size: 30px;
+        }
+        body{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        .app-name{
+            display: inline-flex;
+        }
+
+        .navbar-brand{
+            width: auto;
+        }
+
+        .recipt-name{
+            padding: 20px 0px 0px 5px;
+        }
+
+        .check-one-in{
+            color: #F88379;
+        }
+
+        .recipt-table{
+            width: 100%;
+            display: flex !important;
+            justify-content: space-around;
+            border: 1px solid rgb(216, 216, 216);
+            border-radius: 5px;
+        }
+
+        .table-no{
+            border-bottom: 1px solid rgb(223, 223, 223);
+        }
+
+        table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+
+<body>
+    <div class="invoice">
+        <div class="app-name">
+            <span class="navbar-brand" href="#"><span>Tra</span>elisy</span>
+            <span class="recipt-name">Booking Receipt</span>
+        </div>
+        <div class="info">
+            <div class="guest-name">Name : {{booking.user}}</div>
+            <div class="recipt-date">Date: {{booking.checkin}}</div>
+        </div>
+        <div class="recipt-details">
+            <div class="hotel-recipt">
+                <div class="hotel-name">{{booking.hotel}}</div>
+                <div class="hotel-address">{{booking.hotel.city}}</div>
+            </div>
+            <div class="hotel-info">
+                <div class="check-one">
+                    <div class="check-one-in">Check In</div>
+                    <div class="check-date">{{booking.checkin}}</div>
+                </div>
+                <div class="check-one">
+                    <div class="check-one-in">Check Out</div>
+                    <div class="check-date">{{booking.checkout}}</div>
+                </div>
+                <div class="check-one">
+                    <div class="check-one-in">Room</div>
+                    <div class="check-date">{{booking.room}}</div>
+                </div>
+                <div class="check-one">
+                    <div class="check-one-in">Person</div>
+                    <div class="check-date">{{booking.person}}</div>
+                </div>
+                <div class="check-one">
+                    <div class="check-one-in">Payment Mode</div>
+                    <div class="check-date">Cash on delivery</div>
+                </div>
+                <div class="check-one">
+                    <div class="check-one-in">Booking ID</div>
+                    <div class="check-date">{{booking.id}}</div>
+                </div>
+            </div>
+            <div class="recipt-table">
+                <table>
+                  <tr>
+                    <th>Description</th>
+                    <th>Rate</th>
+                    <th>Amount</th>
+                  </tr>
+                  <tr>
+                    <td>Room charges</td>
+                    <td>Rs {{booking.hotel.price}} * 1 night * {{booking.room}} room</td>
+                    <td>{{booking.totalprice}}</td>
+                  </tr>
+                  <tr>
+                    <td>Other Charges</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                  </tr>
+                  <tr>
+                    <td>Grand Total</td>
+                    <td>N/A</td>
+                    <td>{{booking.totalprice}}</td>
+                  </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

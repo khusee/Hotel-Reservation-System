@@ -1,0 +1,25 @@
+<form class="detail-form" method="get" action="{%url 'reserve' listing.id %}">
+    <div class="price">
+        <span>NPR {{listing.price}}</span> / night
+    </div>
+    <div class="form-input">
+        <div class="label">
+            <label>Dates</label>
+        </div>
+        <div class="check">
+            <input type="date" aria-placeholder="Check-in" class="check-in" name="checkin" value="{{values.checkin}}">
+            <input type="date" aria-placeholder="Check out" name="checkout" value="{{values.checkout}}">
+        </div>
+        <div class="label">
+            <label>Guest</label>
+        </div>
+
+        <div class="check">
+            <input type="number" placeholder="Room" class="check-in" name="room" onclick="room" value="{{values.room}}">
+            <input type="number" placeholder="Person" class="person" name="person" value="{{values.person}}">
+        </div>
+    </div>
+    <div class="hotel-button">
+        <button>Confirm Booking</button>
+    </div>
+</form>

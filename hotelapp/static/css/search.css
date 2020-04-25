@@ -1,0 +1,66 @@
+.search-main{
+    width: 100%;
+    height: 60vh;
+
+    background-image: url('../image/background.jpeg');
+    background-position: center;
+    background-size: cover;
+    line-height: 1.3;
+    position: relative;
+    background-color: rgba(255, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+}
+
+.main-topic{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 45px;
+    letter-spacing: 1px;
+    font-weight: 200;
+    position: absolute;
+    top: 0%;
+}
+
+.second-topic{
+    font-size: 30px;
+}
+
+.form{
+    width: 80%;
+    height: 10vh;
+    background: rgba(212, 212, 212, 0.3);
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.form-location{
+    width: 15%;
+}
+.form input{
+    width: 100%;
+    border: none;
+    height: 6vh;
+    padding: 0 15px;
+    border-radius: 2px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.form button{
+    width: 100%;
+    border: none;
+    background-color: #F88379;
+    height: 6vh;
+    font-size: 18px;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 2px;
+}

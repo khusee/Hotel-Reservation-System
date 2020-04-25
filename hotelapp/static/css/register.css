@@ -1,0 +1,210 @@
+*{
+    padding: 0%;
+    margin: 0%;
+
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.left_box{
+    width: 60%;
+    height: 100%;
+    background-color: rgba(248, 131, 121, 0.27);
+    position: relative;
+
+}
+
+.login-image{
+    position: absolute;
+    top: 5%;
+}
+
+.left_box img{
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.7;
+    width: 100%;
+    height: 100% ;
+    object-fit: cover;
+}
+.left-description{
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+    margin-top: 100px;
+}
+
+.left-description h1{
+    font-size: 80px;
+}
+
+
+.left-description button{
+    border: 0;
+    background-color: #F88379;
+    padding: 10px 20px;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.left-description span{
+    font-size: 20px;
+    text-align: center;
+    padding: 0 20px;
+    width: 65%;
+}
+.logo{
+    font-family: 'Dawning of a New Day', cursive;
+    width: 100%;
+    height: 28%;
+    color: white;
+}
+
+.logo a{
+    font-size: 50px;
+    padding: 50px;
+}
+
+.logo span{
+    color: #F88379;
+}
+
+.remember{
+    width: 95%;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 7.5px;
+    color: rgb(172, 170, 170);
+    letter-spacing: 2px;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+}
+
+.input span{
+    padding: 0 0 5px 5px;
+
+}
+
+.remember a{
+  text-decoration: none;
+  color: rgb(84, 150, 211);
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 75%;
+}
+
+.right_box{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.register{
+    width: 70%;
+}
+
+.register-text{
+    font-size: 60px;
+    color: #635252;
+    letter-spacing: 1px;
+}
+
+.register-description{
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #9e9a9a;
+    font-weight: 200;
+}
+
+.register-name{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+}
+
+.register-name label{
+    color: #7A7676;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.register-name input{
+    border: none;
+    border-bottom: 1.5px solid rgb(233, 232, 232);
+    width: 100%;
+    letter-spacing: 2px;
+    padding: 5px 0 10px 0;
+    font-size: 16px;
+    font-weight: 200;
+
+}
+
+input:focus{
+    outline: none;
+}
+::placeholder {
+    color: #D0CECE;
+
+}
+
+.button{
+    margin: 20px 0 0 0;
+
+}
+
+.button input{
+    background-color: #F88379;
+    padding: 10px 20px;
+    border: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color : white;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.account{
+    margin: 20px 0 0 0;
+    display: flex;
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+.already-text{
+    color: #5E5D5D;
+    margin-right: 5px;
+}
+
+.login-link a{
+    text-decoration: none;
+    color:#F88379 ;
+}
+

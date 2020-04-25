@@ -1,0 +1,106 @@
+{%extends 'base.html'%}
+{%load static%}
+  {%block link%}
+  <link href="{% static 'css/bootstrap.css'%}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/search.css'%}" rel="stylesheet" type="text/css">
+
+  {%endblock%}
+{%block content%}
+  <div class="search-main">
+    <div class="main-topic">
+      <div>Discover The Hotel Near Your Destination Place</div>
+      <div class="second-topic">Easy Booking, Destination, Travel</div>
+    </div>
+    <form class="form" method="get" action="{%url 'search'%}">
+      <div class="form-location">
+        <input type="text" placeholder="Where to" name="location" value="{{values.location}}">
+      </div>
+      <div class="form-location">
+        <input type="number" placeholder="Person" name="person" min="0">
+      </div>
+      <div class="form-location">
+        <input type="number" placeholder="Room" name="room" min="0" value="{{values.room}}">
+      </div>
+      <div class="form-location">
+        <input type="date" placeholder="Check In" name="checkin" value="{{values.checkin}}">
+      </div>
+      <div class="form-location">
+        <input type="date" placeholder="Check out" name="checkout" value="{{values.checkout}}">
+      </div>
+      <div class="form-location">
+        <button>Check Availability</button>
+      </div>
+    </form>
+  </div>
+  <div class="featured">
+    <div class="feature-hotel">
+      {% for qs in query_list%}
+      <div class="feature-one">
+        <div class="hotel-image">
+          <img src='{{qs.photo_one.url}}'>
+        </div>
+        <div class="hotel-bottom">
+          <div class="hotel-name">
+            <h3>{{qs.hotel_name}}</h3>
+          </div>
+          <div class="hotel-place">
+            <div><i class="material-icons"> place</i></div>
+            <div class="hotel-address">{{qs.city}}</div>
+          </div>
+          <div class="hotel-services">
+            {%if qs.air_conditioner%}
+            <div class="service">
+              <div><img src="{% static 'image/air-conditioner.png'%}"></div>
+              <div class="service-name">AC</div>
+            </div>
+            {%endif%}
+            {%if qs.room_service%}
+            <div class="service">
+              <div><img src="{% static 'image/hotel.png'%}"></div>
+              <div class="service-name">Service</div>
+            </div>
+            {%endif%}
+            {%if qs.wifi_service%}
+            <div class="service">
+              <div><img src="{% static 'image/wifi.png'%}"></div>
+              <div class="service-name">Wifi</div>
+            </div>
+            {%endif%}
+            {%if qs.tv_service%}
+            <div class="service">
+              <div><img src="{% static 'image/tv.png'%}"></div>
+              <div class="service-name">TV</div>
+            </div>
+            {%endif%}
+            {%if qs.key_card%}
+            <div class="service">
+              <div><img src="{% static 'image/card.png'%}"></div>
+              <div class="service-name">Key Safe</div>
+            </div>
+            {%endif%}
+            {%if qs.parking%}
+            <div class="service">
+              <div><img src="{% static 'image/car.png'%}"></div>
+              <div class="service-name">Parking</div>
+            </div>
+            {%endif%}
+
+          </div>
+          <div class="hotel-price">
+            <div class="hotel-first">
+              <h4>NPR {{qs.price}}</h4>
+              <span>starting price</span>
+            </div>
+            <form class="hotel-second" method="get" action="{% url 'listing' qs.id%}">
+              <button>Book Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      {%endfor%}
+
+    </div>
+  </div>
+
+  {%endblock%}
+

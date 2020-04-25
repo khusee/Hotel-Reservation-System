@@ -1,0 +1,73 @@
+
+<div class="booking">
+                <div class="booking-head">My Bookings</div>
+                {%if bookings%}
+                {%for reservation in bookings%}
+                <div class="booking-one">
+                    <div class="hotel-image">
+                        <img src="{{reservation.hotel.photo_one.url}}">
+                    </div>
+                    <div class="booking-information">
+                        <div class="booking-names">
+                            <div class="booking-name">{{reservation.hotel}}</div>
+                            <div class="booking-btn">
+                                <form method="post" action="{%url 'cancelbooking' reservation.id%}">
+                                    {%csrf_token%}
+                                    <button>Delete</button>
+                                </form>
+                            </div>
+                            <div class="booking-btn">
+
+                                <form method="get" action="{% url 'gpdf' reservation.id %}">
+                                    <button>Download</button>
+                                </form>
+                            </div>
+
+                        </div>
+                        <div class="hotel-booking">
+                            <div class="check-in">
+                                <div class="boooking-in">
+                                    <span class="material-icons">today</span>
+                                </div>
+                                <div>{{reservation.checkin}}</div>
+                            </div>
+                            <div class="check-in">
+                                <div class="boooking-in">
+                                    <span class="material-icons">today</span>
+                                </div>
+                                <div>{{reservation.checkout}}</div>
+                            </div>
+                            <div class="check-in">
+                                <div class="boooking-in">
+                                    <span class="material-icons">location_on</span>
+                                </div>
+                                <div>{{reservation.hotel.city}}</div>
+                            </div>
+                            <div class="check-in">
+                                <div class="boooking-in">
+                                    <span class="material-icons">supervisor_account</span>
+                                </div>
+                                <div>{{reservation.person}} Person</div>
+                            </div>
+                            <div class="check-in">
+                                <div class="boooking-in">
+                                    <span class="material-icons">meeting_room</span>
+                                </div>
+                                <div>{{reservation.room}} Room </div>
+                            </div>
+                            <div class="check-in">
+                                <div class="boooking-in">
+                                    <span class="material-icons">attach_money</span>
+                                </div>
+                                <div>{{reservation.totalprice}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                {%else%}
+                <div>
+                    <h1>No Bookings</h1>
+                </div>
+                {%endif%}
+            </div>

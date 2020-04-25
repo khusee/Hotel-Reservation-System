@@ -1,0 +1,124 @@
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about-topic{
+    width: 100%;
+    height: 50vh;
+    background: url('image/background.jpeg') no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.4;
+    font-weight: 300;
+    letter-spacing: 2px;
+
+}
+
+.about-hotel{
+    color: white;
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
+.about-second-topic{
+    color: white;
+    font-size: 30px;
+    width: 60%;
+    text-align: center;
+
+}
+
+.about-btn button{
+    padding: 10px;
+    width: 140px;
+    border: 0;
+    margin: 20px 0 0 0;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.book-now{
+    background-color: #F88379;
+    color: white;
+}
+
+.about-main{
+    padding: 100px 0;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.about-left{
+    width: 50%;
+    font-size: 20px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 1px;
+    color: rgb(73, 73, 73);
+
+}
+.main-about{
+    display: flex;
+    width: 80%;
+}
+
+.about-left-head{
+    font-size: 40px;
+    color: #F88379;
+   
+}
+
+.about-image{
+    width: 45%;
+}
+
+.about-image img{
+    width: 100%;
+    height: 350px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+.about-second-main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-left-image{
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.about-right{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.values-head{
+    font-size:40px;
+    border-bottom: 3px solid #F88379;
+    width: 180px;
+}
+
+.mission-head{
+    font-size: 25px;
+}
+
+.mission-details{
+    color: rgb(61, 61, 61);;
+}

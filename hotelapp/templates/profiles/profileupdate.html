@@ -1,0 +1,42 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block link%}
+    <link href="{% static 'css/bootstrap.css'%}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/search.css'%}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/about.css'%}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/profile.css'%}" rel="stylesheet" type="text/css">
+
+{%endblock%}
+{%block content%}
+        <div class="profile">
+            <div class="about-topic">
+                <div class="about-hotel">User Profile</div>
+            </div>
+            <div class="profile-main">
+                <div class="profile-image">
+                    <img src="{{user.profile.image.url}}">
+                </div>
+                <form method="POST" action="{%url 'update'%}" enctype="multipart/form-data">
+                    {%csrf_token%}
+                    <div class="firstname">
+                        <input type="text" placeholder="UserName" name="username" value="{{user.username}}">
+                    </div>
+                    <div class="firstname">
+                        <input type="text" placeholder="Email" name="email" value="{{user.email}}">
+                    </div>
+                    <div class="firstname">
+                        <input type="text" placeholder="Address" name="address" value="{{user.profile.address}}">
+                    </div>
+                    <div class="firstname">
+                        <input type="text" placeholder="Phone Number" name="phonenumber" value="{{user.profile.phone}}">
+                    </div>
+                    <div class="firstname">
+                        <input type="file" placeholder="image" name="profile-image" value="">
+                    </div>
+                    <div class="booking-btn">
+                        <button>save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+{%endblock%}

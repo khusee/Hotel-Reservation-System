@@ -1,0 +1,181 @@
+.profile{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-topic{
+    width: 100%;
+    height: 30vh;
+    background: url('../image/background.jpeg') no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.4;
+    font-weight: 300;
+    letter-spacing: 2px;
+
+}
+
+.profile-main{
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+    width: 60%;
+    border: 1px solid rgb(224, 224, 224);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px 0 rgba(207, 207, 207, 0.16), 0 2px 10px 0 rgba(235, 235, 235, 0.12);
+
+}
+
+.profile-image{
+    width: 37%;
+}
+
+.profile-image img{
+    width: 300px;
+    height: 300px;
+    border: 3px solid rgb(0, 0, 0);
+    object-fit: cover;
+
+}
+
+.profile-details{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 2px;
+    padding: 0 30px ;
+
+}
+
+.profile-name{
+    font-size: 40px;
+    width: 264px;
+    padding-bottom: 20px;
+
+}
+
+.email{
+    display: flex;
+}
+
+.email-head{
+    width: 30%;
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+.email-information{
+    font-size: 18px;
+    padding-bottom: 5px;
+    color: #F88379;
+}
+
+.btns button{
+    border: none;
+    background-color: #F88379;
+    width: 100px;
+    font-size: 20px;
+    padding: 5px 0;
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.booking{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.booking-head{
+    font-size: 40px;
+}
+
+.booking-one{
+    display: flex;
+    width: 60%;
+    border: 1px solid rgb(235, 234, 234);
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.hotel-image{
+    width: 25%;
+}
+
+.hotel-image{
+    height: 140px;
+    object-fit: cover;
+}
+
+.booking-information{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    letter-spacing: 2px;
+    flex-wrap: wrap;
+
+
+}
+
+.booking-names{
+    font-size: 22px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.booking-name{
+    font-size: 22px;
+}
+
+.hotel-booking{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.check-in{
+    display: flex;
+    padding-top: 10px;
+    width: 50%;
+}
+
+.boooking-in{
+    display: flex;
+}
+
+.boooking-in span{
+    color: #F88379;
+    padding-right: 5px;
+}
+
+.booking-btn button{
+    border: none;
+    background-color: #F88379;
+    width: 100px;
+    font-size: 18px;
+    padding: 5px 0;
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.firstname input{
+    width: 340px;
+    padding:5px 25px;
+    margin-bottom: 15px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgb(218, 218, 218);
+}
